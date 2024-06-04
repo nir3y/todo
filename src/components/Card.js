@@ -48,8 +48,12 @@ const Card = ({ taskObj, index, deleteTask, updateListArray }) => {
     };
 
     const cardStyle = {
-        backgroundColor: isCompleted ? '#9a9a9a' : 'white', // 변경된 배경색 스타일
-        transition: 'background-color 0.3s ease' // 부드러운 전환 효과
+        backgroundColor: isCompleted ? '#9a9a9a' : 'white', 
+        transition: 'background-color 0.3s ease' 
+    };
+
+    const taskTextStyle = {
+        textDecoration: isCompleted ? 'line-through' : 'none' // 완료된 상태라면 취소선
     };
 
     return (
@@ -57,7 +61,7 @@ const Card = ({ taskObj, index, deleteTask, updateListArray }) => {
             <div class="card-top" style={{ "background-color": colors[index % 5].primaryColor }}></div>
             <div class="task-holder">
                 <span class="card-header" style={{ "background-color": colors[index % 5].secondaryColor, "border-radius": "10px" }}>{taskObj.Name}</span>
-                <p className="mt-3">{taskObj.Description}</p>
+                <p className="mt-3" style={taskTextStyle}>{taskObj.Description}</p>
 
                 <div style={{ "position": "absolute", "top": "160px", "left": "160px" }}>
                     <button style={{ "color": colors[index % 5].primaryColor, "cursor": "pointer" }} onClick={() => setModal(true)}>close</button>

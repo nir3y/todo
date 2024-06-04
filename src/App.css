@@ -1,9 +1,18 @@
-.header{
-  height: 200px;
-  width: 100%;
-  background-color : #E9EEF6;
-  padding-top: 50px;
+.header {
+    height: 200px;
+    width: 100%;
+    background-color: #E9EEF6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333; /* Add a text color for better contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+    border-bottom: 2px solid #d3d3d3; /* Add a border for better separation */
+    flex-direction: column;
 }
+
 
 .card-container{
   height: 300px;
@@ -50,3 +59,4 @@
   background-color: #F6F7F8;
   padding : 40px 100px;
 }
+
